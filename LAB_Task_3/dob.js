@@ -31,3 +31,37 @@ form.innerHTML = `
 `;
 
 document.body.appendChild(form);
+
+form.addEventListener("submit", function(e){
+
+    const inputs = form.querySelectorAll("input[type='number']");
+    
+    const dd = parseInt(inputs[0].value);
+    const mm = parseInt(inputs[1].value);
+    const yyyy = parseInt(inputs[2].value);
+
+    if(isNaN(dd) || isNaN(mm) || isNaN(yyyy)){
+        alert("Date fields cannot be empty");
+        e.preventDefault();
+        return;
+    }
+
+    if(dd < 1 || dd > 31){
+        alert("Day must be between 1 and 31");
+        e.preventDefault();
+        return;
+    }
+
+    if(mm < 1 || mm > 12){
+        alert("Month must be between 1 and 12");
+        e.preventDefault();
+        return;
+    }
+
+    if(yyyy < 1900 || yyyy > 2016){
+        alert("Year must be between 1900 and 2016");
+        e.preventDefault();
+        return;
+    }
+
+});
