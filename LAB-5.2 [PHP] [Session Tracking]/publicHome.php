@@ -2,7 +2,28 @@
 <html lang="en">
 <head>
     <title>Public Home</title>
-
+    <style>
+        .container{
+            width: 800px;
+            margin: auto;
+            border: 1px solid black;
+        }
+         .header {
+            padding: 15px;
+            border-bottom: 1px solid black;
+        }
+        .nav {
+            float: right;
+        }
+        .footer{
+            text-align:center;
+        }
+        .content{
+            padding: auto;
+            border-bottom: 1px solid black;
+        }
+        
+    </style>
     
 </head>
 <body>
