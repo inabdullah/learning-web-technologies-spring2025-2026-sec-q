@@ -1,4 +1,6 @@
-<!DOCTYPE html>
+<?php
+session_start();
+?>
 <html lang="en">
 <head>
     <title>Public Home</title>
@@ -19,7 +21,7 @@
             text-align:center;
         }
         .content{
-            padding: auto;
+            padding: 40px;
             border-bottom: 1px solid black;
         }
         
@@ -40,7 +42,7 @@
 
     
     <div class="content">
-        <form action="post" enctype="multipart/form-data">
+        <form method="post" action="login.php" enctype="multipart/form-data">
             <fieldset>
                 <legend>REGISTRATION</legend>
                 Name: <input type="text" name="name"><hr>
@@ -56,9 +58,9 @@
                 
                 <fieldset>
                     <legend>DOB</legend>
-                    <input type="text" size="2" maxlength="2" name="" value=""/> / 
-                <input type="text" size="2" maxlength="2" name="" value=""/> / 
-                <input type="text" size="4" maxlength="4" name="" value=""/> 
+                    <input type="text" size="2" maxlength="2" name="dd" value=""/> / 
+                <input type="text" size="2" maxlength="2" name="mm" value=""/> / 
+                <input type="text" size="4" maxlength="4" name="yyyy" value=""/> 
                 (dd/mm/yyyy)  
                 </fieldset>
 
@@ -70,7 +72,23 @@
             </fieldset>
 
         </form>
-        
+        <?php
+        if(isset($_POST['submit'])){
+        if($_POST['password'] == $_POST['cpassword']){
+        $_SESSION['user'] = [
+            "name" => $_POST['name'],
+            "email" => $_POST['email'],
+            "username" => $_POST['username'],
+            "password" => $_POST['password'],
+            "gender" => $_POST['gender'],
+            "dob" => $_POST['dob']
+        ];
+        echo "Registration successful!";
+    } else {
+        echo "Password mismatch!";
+    }
+}
+?>
     </div>
 
     <div class="footer">

@@ -40,7 +40,7 @@
 
     
     <div class="content">
-        <form action="post" action="" enctype="multipart/form-data">
+        <form method="post" action="" enctype="multipart/form-data">
             <fieldset>
                 <legend>FORGOT PASSWORD</legend>
                 Enter Email: <input type="email" name="email"><hr>

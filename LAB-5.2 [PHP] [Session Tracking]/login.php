@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<?php session_start(); ?>
 <html lang="en">
 <head>
     <title>Public Home</title>
@@ -40,13 +40,13 @@
 
     
     <div class="content">
-        <form action="post" action="loginCheck.php" enctype="multipart/form-data">
+        <form method="post" action="loginCheck.php" enctype="multipart/form-data">
             <fieldset>
                 <legend>LOGIN</legend>
                 Username: <input type="text" name="username"><hr>
                 Password: <input type="password" name="password"><hr>
-                <input type="checkbox" name="rem"> Remember Me <br><br>
-                <input type="submit" name="submit" value="Submit">
+                <input type="checkbox" name="remember"> Remember Me <br><br>
+                <input type="submit" name="login" value="Submit">
                 <a href="forgotPassword.php">Forgot Password?</a>
 
             </fieldset>
