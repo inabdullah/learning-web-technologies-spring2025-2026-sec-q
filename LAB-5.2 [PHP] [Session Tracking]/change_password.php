@@ -3,9 +3,9 @@ session_start();
 ?>
 <html lang="en">
 <head>
-    <title>Dashboard</title>
+    <title>Change Password</title>
     <style>
-        .container{
+       .container{
             width: 800px;
             margin: auto;
             border: 2px solid black;
@@ -36,20 +36,18 @@ session_start();
             padding:20px;
             border-bottom: 2px solid black;
         }
-
         
     </style>
     
 </head>
 <body>
     <div class="container">
-
         <div class="header">
-            <img src="logo.png" title="Company Logo" height="40">
-            <div class="nav">
+            <img src="logo.png" height="40">
+                <div class="nav">
                 Logged in as <?=$_SESSION['user']['name']?> |
                 <a href="logout.php">Logout</a>
-            </div>
+                </div>
         </div>
 
         <div class="main">
@@ -57,7 +55,7 @@ session_start();
             <div class="sidebar">
                 <b>Account</b><hr>
                 <ul>
-                <li ><a href="dashboard.php">Dashboard</a></li>
+                <li><a href="dashboard.php">Dashboard</a></li>
                 <li><a href="profile.php">View Profile</a></li>
                 <li><a href="edit_profile.php">Edit Profile</a></li>
                 <li><a href="change_password.php">Change Password</a></li>
@@ -65,14 +63,25 @@ session_start();
                 </ul>
             </div>
 
-            <div class="content">
-                <h3>Welcome <?=$_SESSION['user']['name']?></h3>
-            </div>
+        <div class="content">
+            <fieldset>
+                <legend>PROFILE</legend>
+                Name     :<?=$_SESSION['user']['name']?>
+                <hr>
+                Email    :<?=$_SESSION['user']['email']?>
+                <hr>
+                Gender    :<?=$_SESSION['user']['gender']?>
+                <hr>
+            </fieldset>
+                
 
+            
         </div>
 
-        <div class="footer">Copyright © 2017</div>
-
     </div>
+
+<div class="footer">Copyright © 2017</div>
+
+</div>
 </body>
 </html>

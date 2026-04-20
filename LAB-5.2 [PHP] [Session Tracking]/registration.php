@@ -19,6 +19,7 @@ session_start();
         }
         .footer{
             text-align:center;
+            
         }
         .content{
             padding: 40px;
@@ -42,7 +43,7 @@ session_start();
 
     
     <div class="content">
-        <form method="post" action="login.php" enctype="multipart/form-data">
+        <form method="post" enctype="multipart/form-data">
             <fieldset>
                 <legend>REGISTRATION</legend>
                 Name: <input type="text" name="name"><hr>
@@ -75,15 +76,17 @@ session_start();
         <?php
         if(isset($_POST['submit'])){
         if($_POST['password'] == $_POST['cpassword']){
+            $dob = $_POST['dd']."/".$_POST['mm']."/".$_POST['yyyy'];
         $_SESSION['user'] = [
             "name" => $_POST['name'],
             "email" => $_POST['email'],
             "username" => $_POST['username'],
             "password" => $_POST['password'],
             "gender" => $_POST['gender'],
-            "dob" => $_POST['dob']
+            "dob" => $dob
         ];
         echo "Registration successful!";
+        echo "<br><a href='login.php'>Go to Login</a>";
     } else {
         echo "Password mismatch!";
     }

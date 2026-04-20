@@ -10,6 +10,7 @@ session_start();
             margin: auto;
             border: 1px solid black;
         }
+        
          .header {
             padding: 15px;
             border-bottom: 1px solid black;
@@ -19,9 +20,10 @@ session_start();
         }
         .footer{
             text-align:center;
+            padding: 5px;
         }
         .content{
-            padding: auto;
+            padding: 20px;
             border-bottom: 1px solid black;
         }
         
