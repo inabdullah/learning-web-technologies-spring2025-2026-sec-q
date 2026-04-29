@@ -48,7 +48,7 @@ session_start();
             <img src="logo.png" title="Company Logo" height="40">
             <div class="nav">
                 Logged in as <?=$_SESSION['user']['name']?> |
-                <a href="logout.php">Logout</a>
+                <a href="../controller/logout.php">Logout</a>
             </div>
         </div>
 
@@ -61,7 +61,7 @@ session_start();
                 <li><a href="profile.php">View Profile</a></li>
                 <li><a href="edit_profile.php">Edit Profile</a></li>
                 <li><a href="change_password.php">Change Password</a></li>
-                <li><a href="logout.php">Logout</a></li>
+                <li><a href="../controller/logout.php">Logout</a></li>
                 </ul>
             </div>
 

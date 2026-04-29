@@ -40,7 +40,7 @@
 
     
     <div class="content">
-        <form method="post" action="loginCheck.php" enctype="multipart/form-data">
+        <form method="post" action="../controller/loginCheck.php" enctype="multipart/form-data">
             <fieldset>
                 <legend>LOGIN</legend>
                 Username: <input type="text" name="username"><hr>

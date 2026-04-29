@@ -3,6 +3,6 @@
     session_start();
     //unset($_SESSION['status']);
     session_destroy();
-    header('location: publicHome.php');
+    header('location: ../view/publicHome.php');
 
 ?>

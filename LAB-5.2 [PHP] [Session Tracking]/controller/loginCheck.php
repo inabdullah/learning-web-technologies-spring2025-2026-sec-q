@@ -1,5 +1,6 @@
 <?php
 session_start();
+require_once('../model/userModel.php');
 
 if(isset($_POST['login'])){
 
@@ -14,7 +15,7 @@ if(isset($_POST['login'])){
                 setcookie("user", $_POST['username'], time()+3600);
             }
 
-            header("Location: dashboard.php");
+            header("Location: ../view/dashboard.php");
             exit();
         } else {
             echo "Invalid credentials!";
